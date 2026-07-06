@@ -464,10 +464,10 @@
   <hr class="page-divider">
 
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-label">운용 지갑 수</div><div class="stat-value">1,245,852<span>개</span></div></div>
-    <div class="stat-card"><div class="stat-label">일일 정산</div><div class="stat-value" style="font-size:15px">UTC 06:00<span>자동</span></div></div>
-    <div class="stat-card"><div class="stat-label">모니터링</div><div class="stat-value">24/7</div></div>
-    <div class="stat-card"><div class="stat-label">가동률</div><div class="stat-value">99.99<span>%</span></div></div>
+    <div class="stat-card"><div class="stat-label">글로벌 회원 수</div><div class="stat-value">250,000<span>명+</span></div></div>
+    <div class="stat-card"><div class="stat-label">월간 수익 분배액</div><div class="stat-value">$28M<span>/월</span></div></div>
+    <div class="stat-card"><div class="stat-label">AI 추천 정확도</div><div class="stat-value">87<span>%</span></div></div>
+    <div class="stat-card"><div class="stat-label">가동률</div><div class="stat-value">99.97<span>%</span></div></div>
   </div>
 
   <h2>이중 AI 엔진 구조</h2>
@@ -582,63 +582,57 @@
 <div class="page" id="p-guide">
   <div class="breadcrumb"><span>사용 가이드</span><span class="breadcrumb-sep">›</span><span>유저 가이드</span></div>
   <h1>유저 가이드 (User Guide)</h1>
-  <p class="page-subtitle">대시보드 구성, 패키지 관리, 입출금 절차, 보안 설정을 안내합니다.</p>
+  <p class="page-subtitle">패키지 구조, 직급 달성 조건, 해지 정책, 보안 설정을 안내합니다.</p>
   <hr class="page-divider">
 
-  <h2>대시보드 개요</h2>
+  <h2>패키지 구조</h2>
+  <p>모든 약정 상품은 <strong>12개월 고정</strong>. Flexible만 무약정입니다.</p>
   <div class="table-wrap"><table>
-    <tr><th>항목</th><th>설명</th></tr>
-    <tr><td>총 자산</td><td>보유 USDT + CNYT 평가액 합산</td></tr>
-    <tr><td>월간 수익</td><td>당월 적립된 수익</td></tr>
-    <tr><td>CNYT 잔액</td><td>보유 중인 CNYT 수량</td></tr>
-    <tr><td>누적 수익</td><td>가입 이후 총 수익 합계</td></tr>
+    <tr><th>상품</th><th>가격</th><th>약정</th><th>USDT 월 수익</th><th>CNYT 추가 지급</th><th>연 수익률</th></tr>
+    <tr><td><strong>Flexible</strong></td><td>$100</td><td>무약정</td><td>월 4%~</td><td>없음</td><td>48%~</td></tr>
+    <tr><td><strong>Basic</strong></td><td>$200</td><td>12M</td><td>월 7%~</td><td>수익의 2%</td><td>84%~ +1.68%</td></tr>
+    <tr><td><strong>Standard</strong></td><td>$500</td><td>12M</td><td>월 9%~</td><td>수익의 4%</td><td>108%~ +4.32%</td></tr>
+    <tr><td><strong>Premium</strong></td><td>$1,000</td><td>12M</td><td>월 11%~</td><td>수익의 6%</td><td>132%~ +7.92%</td></tr>
+    <tr><td><strong>VIP</strong></td><td>$5,000</td><td>12M</td><td>월 18%~</td><td>수익의 10%</td><td>216%~ +21.6%</td></tr>
   </table></div>
-  <p>정산 시간: <strong>매일 UTC 06:00</strong> 자동 입금</p>
+  <blockquote>Flexible 특별 정책: 즉시 해지 가능, 24시간 내 원금 100% 반환. White 직급 달성 원할 시 $200 예치금 필요.</blockquote>
 
-  <h2>패키지 관리</h2>
-  <h3>활성 패키지 확인</h3>
-  <ul>
-    <li><strong>[내 포트폴리오]</strong> → 패키지 목록 · 만기일 · 월간 수익 현황 확인</li>
-    <li>Flexible 플랜은 락업 없이 언제든지 원금 회수 가능</li>
-    <li>Basic ~ VIP 플랜은 <strong>12개월 락업</strong> — 만기 전 해지 시 원금 <strong>15% 위약금</strong></li>
-  </ul>
-  <h3>재투자</h3>
-  <ul>
-    <li>만기 도래 후 원금을 즉시 재투자하거나 출금 선택 가능</li>
-    <li>상위 플랜 선택 시 CNYT 보상 비율 상승</li>
-  </ul>
-
-  <h2>입금 (Deposit)</h2>
+  <h2>동적 수익률: 3모드 시스템</h2>
+  <p>매일 AI가 전날 실적을 분석해 당일 운영 모드를 결정합니다.</p>
   <div class="table-wrap"><table>
-    <tr><th>방식</th><th>수수료</th></tr>
-    <tr><td>플랫폼 입금 수수료</td><td><strong>0%</strong></td></tr>
-    <tr><td>블록체인 네트워크 수수료</td><td>네트워크 상황에 따라 변동</td></tr>
-  </table></div>
-  <blockquote>잘못된 주소로의 송금은 복구되지 않습니다. 반드시 세 번 확인하세요.</blockquote>
-
-  <h2>출금 (Withdraw)</h2>
-  <div class="table-wrap"><table>
-    <tr><th>유형</th><th>조건</th><th>위약금</th></tr>
-    <tr><td>수익 출금</td><td>언제든지</td><td>없음</td></tr>
-    <tr><td>만기 후 원금 출금</td><td>12개월 만기 후</td><td>없음</td></tr>
-    <tr><td>조기 해지 출금</td><td>만기 전 (Flexible 제외)</td><td>원금 <strong>15%</strong></td></tr>
+    <tr><th>모드</th><th>연간 주기</th><th>내용</th></tr>
+    <tr><td><strong>수익일</strong> (정상 운영)</td><td>80%</td><td>복합 수익 재분배 메커니즘 완전 작동</td></tr>
+    <tr><td><strong>방어일</strong> (보수 운영)</td><td>15%</td><td>서킷브레이커 발동 또는 준비금 보강 우선</td></tr>
+    <tr><td><strong>잭팟일</strong> (특별 이벤트)</td><td>5%</td><td>특별 높은 수익률, 전체 보너스 지급</td></tr>
   </table></div>
 
-  <h3>출금 한도</h3>
+  <h2>글로벌 직급 달성 조건</h2>
   <div class="table-wrap"><table>
-    <tr><th>랭크</th><th>일 한도</th><th>월 한도</th></tr>
-    <tr><td>White</td><td>$200</td><td>$5,000</td></tr>
-    <tr><td>Blue</td><td>$500</td><td>$15,000</td></tr>
-    <tr><td>Purple</td><td>$2,000</td><td>$50,000</td></tr>
-    <tr><td>Red</td><td>$5,000</td><td>$200,000</td></tr>
-    <tr><td>Black</td><td>한도 없음</td><td>한도 없음</td></tr>
+    <tr><th>직급</th><th>패키지</th><th>직접추천</th><th>하부육성</th><th>팀매출</th><th>롤업 대수</th><th>직급 수당</th></tr>
+    <tr><td><strong>White</strong></td><td>Basic($200)+</td><td>0명</td><td>—</td><td>$0</td><td>없음</td><td>없음</td></tr>
+    <tr><td><strong>Blue</strong></td><td>Standard($500)+</td><td>3명</td><td>White 3명</td><td>$1,000</td><td>3대</td><td>없음</td></tr>
+    <tr><td><strong>Purple</strong></td><td>Premium($1,000)+</td><td>5명</td><td>Blue 3명</td><td>$10,000</td><td>7대</td><td>없음</td></tr>
+    <tr><td><strong>Red</strong></td><td>VIP($5,000)+</td><td>10명</td><td>Purple 3명</td><td>$100,000</td><td>15대</td><td>일일 총수익의 <strong>1%</strong> 공유</td></tr>
+    <tr><td><strong>Black</strong></td><td>$10,000+</td><td>15명</td><td>Red 3명</td><td>$1,000,000</td><td>25대</td><td>일일 총수익의 <strong>2%</strong> 공유</td></tr>
   </table></div>
+  <blockquote>직급 유지: 4가지 조건 중 1개라도 미달 시 매일 자정(UTC 00:00) 배치 정산 시 하위 직급으로 강등. 하부 회원이 동급 이상 달성 시 해당 라인 수익 단절.</blockquote>
+
+  <h2>중도 해지 정책</h2>
+  <div class="table-wrap"><table>
+    <tr><th>해지 시점</th><th>환급 정책</th></tr>
+    <tr><td>즉시 (Flexible)</td><td>24시간 내 원금 100%</td></tr>
+    <tr><td>약정 중도 해지 (Basic~VIP)</td><td>원금의 일부 수수료 차감 후 환급</td></tr>
+    <tr><td>12개월 만기 후</td><td>원금 + 락업 수당 전액 해제 지급</td></tr>
+  </table></div>
+  <blockquote>Basic~VIP 플랜은 12개월 약정 기간 중 원금 환급이 원칙적으로 불가능합니다. Flexible 플랜만 예외.</blockquote>
 
   <h2>보안 설정</h2>
   <div class="table-wrap"><table>
-    <tr><th>항목</th><th>설명</th></tr>
-    <tr><td>거래 비밀번호</td><td>모든 금융 거래 시 필수 입력</td></tr>
-    <tr><td>Google Authenticator 2FA</td><td>출금·투자 시 OTP 인증</td></tr>
+    <tr><th>계층</th><th>기술</th><th>역할</th></tr>
+    <tr><td>인증</td><td>2FA + 생체인증</td><td>회원 신원 보호</td></tr>
+    <tr><td>암호화</td><td>AES-256 + TLS 1.3</td><td>데이터 전송 보호</td></tr>
+    <tr><td>감시</td><td>24/7 AI 모니터링</td><td>비정상 거래 탐지</td></tr>
+    <tr><td>감사</td><td>분기별 외부 감사</td><td>정기적 검증</td></tr>
   </table></div>
 
   <div class="page-nav">
@@ -657,55 +651,100 @@
 <div class="page" id="p-earn">
   <div class="breadcrumb"><span>사용 가이드</span><span class="breadcrumb-sep">›</span><span>수익 시스템</span></div>
   <h1>수익 시스템 (Earning System)</h1>
-  <p class="page-subtitle">커미션 · 랭크 · CNYT 보상 · 추천인 프로그램 전체 구조를 안내합니다.</p>
+  <p class="page-subtitle">LONGRISE AI의 5가지 수당 구조 전체를 안내합니다. (V8.9 마스터 플랜 기준)</p>
   <hr class="page-divider">
 
-  <h2>1. 커미션 구조 (Commission)</h2>
-  <h3>직접 추천 커미션</h3>
-  <ul>
-    <li><strong>직접 추천:</strong> 투자금의 <strong>10%</strong></li>
-    <li><strong>2단계:</strong> 투자금의 <strong>1%</strong></li>
-    <li><strong>3단계 이하:</strong> 투자금의 <strong>0.1%</strong></li>
-    <li><strong>최대 25단계</strong>까지 누적 적용 → 총합 <strong>≈ 11.11%</strong></li>
-  </ul>
-  <h3>상위 랭크 추가 보상</h3>
+  <h2>핵심 보상 5가지 요약</h2>
   <div class="table-wrap"><table>
-    <tr><th>랭크</th><th>추가 월간 보상</th></tr>
-    <tr><td>Red</td><td>전체 Red 티어 입금액의 <strong>1% / 월</strong></td></tr>
-    <tr><td>Black</td><td>전체 Black 티어 입금액의 <strong>2% / 월</strong></td></tr>
+    <tr><th>#</th><th>보상 종류</th><th>내용</th></tr>
+    <tr><td>01</td><td><strong>데일리 AI 배팅 수익</strong></td><td>USDT + CNYT 차등 지급</td></tr>
+    <tr><td>02</td><td><strong>직접 추천 수당</strong></td><td>1대 직접추천 패키지 금액의 10%</td></tr>
+    <tr><td>03</td><td><strong>롤업 수당</strong></td><td>25대 체감 — 배팅 수익의 10%</td></tr>
+    <tr><td>04</td><td><strong>글로벌 직급 수당</strong></td><td>Red · Black 직급 / 일일 총수익 공유</td></tr>
+    <tr><td>05</td><td><strong>CNYT 초기 보너스</strong></td><td>구매금액 ÷ $0.02 / 즉시 지급 / 상장 전 락업</td></tr>
   </table></div>
 
-  <h2>2. 랭크 시스템 (Rank)</h2>
-  <p>LONGRISE AI는 5단계 멤버십 랭크를 운영합니다: <strong>White → Blue → Purple → Red → Black</strong></p>
+  <h2>1. 데일리 AI 배팅 수익</h2>
+  <p>VIP 기준 월 수익률 18%~는 아래 3가지 요소의 합산으로 매일 변동합니다.</p>
   <div class="table-wrap"><table>
-    <tr><th>랭크</th><th>출금 일 한도</th><th>출금 월 한도</th><th>주요 혜택</th></tr>
-    <tr><td><strong>White</strong></td><td>$200</td><td>$5,000</td><td>기본 포트폴리오 접근</td></tr>
-    <tr><td><strong>Blue</strong></td><td>$500</td><td>$15,000</td><td>고급 분석 대시보드 · 우선 지원</td></tr>
-    <tr><td><strong>Purple</strong></td><td>$2,000</td><td>$50,000</td><td>전담 계정 매니저 · 주간 인사이트</td></tr>
-    <tr><td><strong>Red</strong></td><td>$5,000</td><td>$200,000</td><td>VIP 시그널 · 월 1% 추가 풀 보상</td></tr>
-    <tr><td><strong>Black</strong></td><td>한도 없음</td><td>한도 없음</td><td>최고 권한 · 월 2% 추가 풀 보상</td></tr>
+    <tr><th>요소</th><th>평균 기여</th><th>설명</th></tr>
+    <tr><td>Pool Size Factor (쉐어)</td><td>6%~</td><td>총 판돈 규모에 따른 하우스 우위</td></tr>
+    <tr><td>Betting Performance (아바타)</td><td>9%~</td><td>4개 거점 베팅 성과 평균</td></tr>
+    <tr><td>Futures Return (코인 선물거래)</td><td>3%~</td><td>AI 코인 선물거래 수익</td></tr>
+    <tr><td><strong>합계 (VIP 기준)</strong></td><td><strong>18%~</strong></td><td>월 평균 (변동폭 14~22%)</td></tr>
   </table></div>
-  <blockquote>랭크는 조건 충족 시 자동 승급되며, 한 번 달성한 랭크는 하락하지 않습니다.</blockquote>
+  <div class="callout">30일 통계 (VIP 기준): 평균 17.8% / 최고 21.7% / 최저 14.2%</div>
 
-  <h2>3. CNYT 보상</h2>
+  <h2>2. 직접 추천 수당</h2>
+  <p>본인이 직접 추천한 1대의 패키지 구매금액의 <strong>10% 즉시 지급</strong>. 추가 구매 시 매회 동일 적용.</p>
   <div class="table-wrap"><table>
-    <tr><th>플랜</th><th>CNYT 보상</th></tr>
-    <tr><td>Flexible</td><td>—</td></tr>
-    <tr><td>Basic</td><td>수익의 <strong>2%</strong></td></tr>
-    <tr><td>Standard</td><td>수익의 <strong>4%</strong></td></tr>
-    <tr><td>Premium</td><td>수익의 <strong>6%</strong></td></tr>
-    <tr><td>VIP</td><td>수익의 <strong>10%</strong></td></tr>
+    <tr><th>추천 상품</th><th>구매금액</th><th>수당 비율</th><th>수령금액</th></tr>
+    <tr><td>Flexible</td><td>$100</td><td>10%</td><td>$10</td></tr>
+    <tr><td>Basic</td><td>$200</td><td>10%</td><td>$20</td></tr>
+    <tr><td>Standard</td><td>$500</td><td>10%</td><td>$50</td></tr>
+    <tr><td>Premium</td><td>$1,000</td><td>10%</td><td>$100</td></tr>
+    <tr><td>VIP</td><td>$5,000</td><td>10%</td><td><strong>$500</strong></td></tr>
   </table></div>
-  <div class="callout"><strong>CNYT 토큰 개요</strong><br>발행처: Horizon Capital Foundation (HCF) &nbsp;|&nbsp; 출시가: <strong>$0.01</strong> &nbsp;|&nbsp; 목표가: <strong>$10.00</strong><br>기반 자산: $1B+ 규모 아시아 카지노 실물자산 (RWA) &nbsp;|&nbsp; 기술 표준: ERC-20 · BEP-20 &nbsp;|&nbsp; 거래소 상장 목표: <strong>2026년</strong></div>
-  <div class="callout"><strong>HCF × LONGRISE</strong><br>HCF는 LONGRISE AI의 전략적 투자자입니다. 이 투자의 일환으로 CNYT 총 발행량의 <strong>20%</strong>가 LONGRISE 생태계 유저 보상 풀로 배정되었으며, 플랫폼 운용 성과에 따라 순차 지급됩니다.</div>
+  <blockquote>동일 회원 추가 구매 시에도 구매 건당 매회 10% 지급. 예: 동일 회원이 Premium $1,000을 3회 구매 → $100 × 3 = $300</blockquote>
 
-  <h2>4. 추천인 프로그램 (Referral)</h2>
-  <ol class="steps">
-    <li>플랫폼 가입 후 <strong>[내 프로필]</strong> → 고유 추천 링크 확인</li>
-    <li>링크 공유 → 해당 링크로 가입한 회원의 투자 시 커미션 자동 발생</li>
-    <li><strong>[대시보드]</strong> → <strong>[추천 현황]</strong>에서 실시간 통계 확인</li>
-  </ol>
-  <p>커미션은 매일 UTC 06:00 정산 시 자동 적립. 최소 출금: <strong>$50 USDT</strong></p>
+  <h2>3. 롤업 수당 (25대 체감형)</h2>
+  <p>직하위 회원들의 <strong>배팅 수익금</strong>의 10% 매칭, 25대까지 체감 적용.</p>
+  <div class="callout">
+    <strong>계산 예시</strong> (하위 회원 월 배팅 수익 $100 기준)<br>
+    1대: $10 (10%) &nbsp;|&nbsp; 2대: $1 (10% of $10) &nbsp;|&nbsp; 3대: $0.10 &nbsp;|&nbsp; … 25대까지 체감<br>
+    평균 15대 기준 총합: <strong>≈ 11.11%</strong>
+  </div>
+  <blockquote>⚠️ 직접추천 수당(패키지 구매금액 × 10%)과 롤업 수당(배팅 수익금 × 10%)은 완전히 다른 별개 보상입니다.</blockquote>
+
+  <h2>4. 글로벌 직급 수당 (Red · Black)</h2>
+  <div class="table-wrap"><table>
+    <tr><th>직급</th><th>직급 수당</th><th>추가 특권</th></tr>
+    <tr><td><strong>Red</strong></td><td>Red 직급 내 일일 총수익의 <strong>1% 공유</strong></td><td>CNYT 웰컴 보너스 500,000개 · P2P 6% 마진</td></tr>
+    <tr><td><strong>Black</strong></td><td>Black 직급 내 일일 총수익의 <strong>2% 공유</strong></td><td>Red 모든 특권 + 최고 권한</td></tr>
+  </table></div>
+
+  <h2>5. CNYT 초기 보너스</h2>
+  <p>공식: <strong>패키지 구매금액 ÷ $0.02</strong> (즉시 지급 / 상장 전 락업)</p>
+  <div class="table-wrap"><table>
+    <tr><th>패키지</th><th>구매금액</th><th>공식</th><th>CNYT 지급량</th></tr>
+    <tr><td>Flexible</td><td>$100</td><td>$100 ÷ $0.02</td><td>5,000개</td></tr>
+    <tr><td>Basic</td><td>$200</td><td>$200 ÷ $0.02</td><td>10,000개</td></tr>
+    <tr><td>Standard</td><td>$500</td><td>$500 ÷ $0.02</td><td>25,000개</td></tr>
+    <tr><td>Premium</td><td>$1,000</td><td>$1,000 ÷ $0.02</td><td>50,000개</td></tr>
+    <tr><td>VIP</td><td>$5,000</td><td>$5,000 ÷ $0.02</td><td>250,000개</td></tr>
+  </table></div>
+  <div class="callout">
+    <strong>CNYT 공급 배경</strong><br>
+    HCF(Horizon Capital Foundation)는 LONGRISE AI의 전략적 투자자로서, CNYT 총 발행량(10억 개)의 <strong>20%(2억 개)</strong>를 LONGRISE 생태계 유저 보상 풀로 배정했습니다. 초기 보너스 및 USDT 수익 연동 CNYT는 이 물량에서 순차 지급됩니다.
+  </div>
+
+  <h2>자금 분배 구조 (Fund Allocation)</h2>
+  <div class="table-wrap"><table>
+    <tr><th>항목</th><th>비율</th><th>역할</th></tr>
+    <tr><td><strong>준비금 (Reserve)</strong></td><td><strong>83%</strong></td><td>원금 보호 · 서킷브레이커 재원 · 장기 안정성 확보</td></tr>
+    <tr><td><strong>추천 수당 (Referral)</strong></td><td><strong>10%</strong></td><td>직접 추천 + 롤업 수당 전체 재원</td></tr>
+    <tr><td><strong>글로벌 풀 (Global Pool)</strong></td><td><strong>3%</strong></td><td>Red · Black 직급 수당 공유 재원</td></tr>
+    <tr><td><strong>운영비 (Operations)</strong></td><td><strong>4%</strong></td><td>기술 인프라 · 팀 운영 · 법무 · 컴플라이언스</td></tr>
+  </table></div>
+
+  <h2>서킷브레이커 시스템 (3단계)</h2>
+  <p>준비금 비율에 따라 스마트컨트랙트가 <strong>자동 실행</strong>하는 3단계 방어 메커니즘입니다.</p>
+  <div class="table-wrap"><table>
+    <tr><th>단계</th><th>준비금 비율</th><th>발동 조건</th><th>조치</th></tr>
+    <tr><td><strong>Level 1 (경보)</strong></td><td>75% ~ 83%</td><td>준비금이 목표 아래로 하락</td><td>신규 패키지 판매 일시 중단 · 공개 공지 발송</td></tr>
+    <tr><td><strong>Level 2 (방어)</strong></td><td>50% ~ 75%</td><td>지속적 준비금 감소</td><td>CNYT 수익 비율 조정 · 수익 분배 사이클 연장 검토</td></tr>
+    <tr><td><strong>Level 3 (비상)</strong></td><td>50% 미만</td><td>심각한 준비금 고갈</td><td>거버넌스 멀티시그 긴급 소집 · 출금 일시 제한 · 재단 비상 자금 투입</td></tr>
+  </table></div>
+
+  <h2>P2P 차익 거래 시스템 (CNYT)</h2>
+  <p>Red 직급 이상 회원이 참여하는 USDT-CNYT P2P 차익 시스템입니다.</p>
+  <div class="table-wrap"><table>
+    <tr><th>참여자</th><th>역할</th><th>환율</th></tr>
+    <tr><td>매도자 (전체 회원)</td><td>CNYT 판매</td><td>기준가의 <strong>97%</strong></td></tr>
+    <tr><td>매수자 (Red 이상)</td><td>CNYT 매수</td><td>기준가의 <strong>97%</strong></td></tr>
+    <tr><td>매수자 수익 실현</td><td>산하 신규 매출 등록 시</td><td><strong>103% 가치</strong> 인정 → 총 <strong>6% 마진</strong></td></tr>
+  </table></div>
+  <blockquote>Flexible 웰컴 보너스 물량은 2026년 12월 TGE 락업 해제 후 매도 가능.</blockquote>
 
   <div class="page-nav">
     <button class="page-nav-btn" onclick="navTo('p-guide')">
@@ -731,11 +770,11 @@
   <div class="faq-item"><div class="faq-q">최소 투자금액은 얼마인가요?</div><div class="faq-a"><div class="table-wrap" style="margin-top:10px"><table><tr><th>플랜</th><th>최소 투자금</th><th>락업</th></tr><tr><td>Flexible</td><td>$100</td><td>없음</td></tr><tr><td>Basic</td><td>$200</td><td>12개월</td></tr><tr><td>Standard</td><td>$500</td><td>12개월</td></tr><tr><td>Premium</td><td>$1,000</td><td>12개월</td></tr><tr><td>VIP</td><td>$5,000</td><td>12개월</td></tr></table></div></div></div>
   <div class="faq-item"><div class="faq-q">수익을 언제든지 출금할 수 있나요?</div><div class="faq-a">네. 가용 잔액에 적립된 USDT는 언제든지 출금 신청 가능합니다. 최소 출금: <strong>$50 USDT</strong> / 정산: <strong>매일 UTC 06:00</strong></div></div>
   <div class="faq-item"><div class="faq-q">패키지를 조기 해지하면 어떻게 되나요?</div><div class="faq-a">Flexible은 언제든지 위약금 없이 회수 가능. Basic ~ VIP는 12개월 만기 전 해지 시 <strong>원금 15% 위약금</strong> 발생, 잔여 CNYT 보상 소멸, 취소 불가.</div></div>
-  <div class="faq-item"><div class="faq-q">추천인 커미션은 어떻게 발생하나요?</div><div class="faq-a">내 링크로 가입한 회원의 투자금 기준으로 단계별 커미션이 발생합니다. 직접 추천 <strong>10%</strong> / 2단계 <strong>1%</strong> / 3단계 이하 <strong>0.1%</strong> (최대 25단계, 총 ≈ 11.11%)</div></div>
+  <div class="faq-item"><div class="faq-q">추천인 커미션은 어떻게 발생하나요?</div><div class="faq-a">두 종류의 수당이 있습니다.<br><br><strong>직접 추천 수당:</strong> 내가 직접 추천한 1대의 패키지 구매금액의 <strong>10% 즉시 지급</strong>.<br><br><strong>롤업 수당:</strong> 직하위 회원들의 <strong>배팅 수익금</strong>의 10%가 25대까지 체감 적용됩니다. 평균 15대 기준 총합 ≈ <strong>11.11%</strong>.</div></div>
 
   <h2>프로젝트 FAQ</h2>
   <div class="faq-item"><div class="faq-q">두 개의 AI 엔진은 어떻게 작동하나요?</div><div class="faq-a"><strong>Engine 01 (카지노 AI):</strong> Georgia · 다낭 · 호치민 · 필리핀 · 캄보디아 등 공인 카지노의 확률 데이터를 분석해 바카라 · 룰렛 · 슬롯에서 하우스 엣지 우위를 활용합니다.<br><br><strong>Engine 02 (선물 퀀트 AI):</strong> BTC-PERP 스캘핑 · ETH 차익거래 등 암호화폐 파생상품 시장을 대상으로 알고리즘 트레이딩을 수행합니다. 샤프 지수 2.1 · FIX 오더 라우팅 지연 0.31ms.</div></div>
-  <div class="faq-item"><div class="faq-q">CNYT란 무엇인가요?</div><div class="faq-a">CNYT는 Horizon Capital Foundation(HCF)이 발행하는 <strong>독립 디지털 자산</strong>으로, LONGRISE 플랫폼 유저 보상 수단으로 제공됩니다.<br>출시가: <strong>$0.01</strong> / 목표가: <strong>$10.00</strong> / 거래소 상장 목표: <strong>2026년</strong></div></div>
+  <div class="faq-item"><div class="faq-q">CNYT란 무엇인가요?</div><div class="faq-a">CNYT는 Horizon Capital Foundation(HCF)이 발행하는 <strong>독립 디지털 자산</strong>으로, LONGRISE 플랫폼 유저 보상 수단으로 제공됩니다.<br>출시가: <strong>$0.01</strong> / 현재가: <strong>$0.03</strong> (누적 +200%) / 장기 목표가: <strong>$1.00</strong> / 거래소 상장 목표: <strong>2026년</strong></div></div>
   <div class="faq-item"><div class="faq-q">변동성 시장에서도 수익이 발생하나요?</div><div class="faq-a">Engine 01과 Engine 02가 병렬 운용되어 시장 상황에 따라 최적 전략이 자동 선택됩니다. 암호화폐 시장 변동이 클 경우 카지노 엔진 비중이 높아지는 구조입니다.</div></div>
   <div class="faq-item"><div class="faq-q">LONGRISE의 장기 비전은 무엇인가요?</div><div class="faq-a"><ul style="margin-top:6px"><li>CNYT 거래소 상장 (2026년 목표)</li><li>글로벌 활성 회원 확대</li><li>CND 블록체인 런칭 (2028년 Q1 목표)</li><li>AI 엔진 고도화 및 다자산 지원 확대</li></ul></div></div>
 
