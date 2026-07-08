@@ -691,6 +691,7 @@
 
   <h2>Casino AI Engine (추천 시스템)</h2>
   <p><strong>목적:</strong> 전 세계 온/오프라인 카지노 베팅 데이터와 회원의 거래 패턴을 분석하여 개인화된 추천 제공</p>
+  <p>LONGRISE AI가 파트너십을 맺은 178개 카지노는 단순한 숫자가 아닙니다. 마카오의 VIP 정킷 룸부터 조지아·베트남·필리핀의 리조트 카지노까지, 대륙과 게임 유형을 아우르는 다층 데이터가 매일 Casino AI Engine에 실시간으로 유입됩니다. 딜러가 교체되고, 게임 룰이 바뀌고, 시장이 흔들려도 — AI는 이미 수백만 건의 변수를 학습한 상태입니다. 그 결과 추천 정확도 <strong>87%</strong>, 추천 채택률 <strong>73%</strong>라는 수치가 현재까지 유지되고 있습니다.</p>
   <div class="table-wrap"><table>
     <tr><th>항목</th><th>내용</th></tr>
     <tr><td>데이터 소스</td><td>178개 카지노 파트너사 베팅 데이터 + 회원 일일 거래 활동 기록</td></tr>
@@ -704,6 +705,7 @@
 
   <h2>HFT Quant Engine (고빈도 거래)</h2>
   <p><strong>목적:</strong> 고빈도 거래(High-Frequency Trading) 기술로 마이크로 레벨의 이익 창출</p>
+  <p>개발 초기, 팀은 HFT 단독으로 승부를 걸었다가 한계에 부딪혔습니다. Citadel, Virtu 같은 글로벌 HFT 기업들은 거래소 서버 내부에 장비를 직접 배치해 응답 시간 0.1ms를 구현합니다. LONGRISE AI 싱가포르 서버에서 거래소까지의 지연 시간은 12ms — 순수 속도 경쟁에서는 이길 수 없는 구조였습니다. CTO Marcus가 화이트보드에 남긴 말이 방향을 바꿨습니다: <em>"We can't fight Citadel with a knife."</em> HFT Quant Engine은 이후 속도 경쟁이 아닌 <strong>수학적 패턴 최적화</strong>로 전략을 전환했고, Casino AI Engine과 결합함으로써 경쟁사가 흉내낼 수 없는 Closed-Loop 구조를 완성했습니다. 현재 일일 거래 횟수 <strong>50,000회 이상</strong>, IBM Qiskit 양자 시뮬레이션 기반으로 운영됩니다.</p>
   <div class="table-wrap"><table>
     <tr><th>항목</th><th>내용</th></tr>
     <tr><td>감지 단위</td><td>나노초 단위 시장 변동 감지</td></tr>
@@ -722,6 +724,7 @@
   </table></div>
 
   <h3>Adaptive Retraining Pipeline (Dr. Arjun Mehta 설계)</h3>
+  <p>두 엔진의 결합이 완성된 이후에도 팀에게 남은 과제가 있었습니다. AI 모델은 시간이 지나면 반드시 정확도가 떨어집니다(Model Drift). Phase 1 Casino AI 단독 시절, 정확도는 71.3%에서 3개월 만에 58.2%로 붕괴했습니다. 이를 해결하기 위해 Chief Quant Dr. Arjun Mehta가 설계한 것이 Adaptive Retraining Pipeline입니다. 매 6시간마다 모델 성능을 자동 점검하고, 기준치(68%) 아래로 떨어지는 즉시 최근 72시간 데이터로 재학습을 트리거합니다. 평균 4.2시간 내 복구 완료 — 이 시스템 덕분에 Model Drift 주기는 <strong>3개월에서 최대 11개월로 연장</strong>되었습니다.</p>
   <div class="table-wrap"><table>
     <tr><th>항목</th><th>내용</th></tr>
     <tr><td>성능 체크 주기</td><td>매 6시간</td></tr>
@@ -771,6 +774,7 @@
   </table></div>
 
   <h2>데이터 플로우</h2>
+  <p>회원이 플랫폼에서 활동하는 순간부터 수익이 지갑에 도착하기까지, LONGRISE AI의 모든 처리는 5단계 자동 파이프라인으로 실행됩니다. 사람의 개입 없이, 매일 UTC 00:00 기준으로 반복됩니다.</p>
   <ol class="steps">
     <li><strong>회원 활동 수집</strong> — 거래 기록, 로그인 패턴, 추천 활동</li>
     <li><strong>Casino AI 분석</strong> — 패턴 인식, 위험도 평가, 추천 생성</li>
@@ -828,6 +832,7 @@
     <tr><td>2026-07-07</td><td>$0.02</td><td>현재가</td></tr>
   </table></div>
   <div class="callout">출시 이후 누적 <strong>+100%</strong> 상승. 장기 전략 목표가 <strong>$1.00</strong> (출시가 대비 ×100)</div>
+  <p>CNYT가 $0.01에서 출발한 것은 단순한 시작가가 아닙니다. HCF(Horizon Capital Foundation)와의 파트너십 협상에서 David가 지켜낸 구조 — <strong>15% 재단 수수료, 50% 회원 보상 배정</strong> — 이 장기 가격 상승의 토대입니다. 회원이 늘수록 CNYT 수요가 증가하고, 수요가 늘수록 가격이 오르는 구조입니다. 현재 $0.02는 $1.00 목표가로 가는 과정의 한 지점이며, 2027년 Q1 Binance·OKX·Gate.io·Bybit 상장이 완료되는 순간 CNYT는 플랫폼 외부에서 처음으로 자유롭게 거래되기 시작합니다.</p>
 
   <h2>초기 보너스 구조</h2>
   <p>공식: <strong>패키지 구매금액 ÷ $0.02</strong> (즉시 지급 / 상장 전 락업)</p>
@@ -1229,18 +1234,24 @@
 
   <div class="faq-item">
     <div class="faq-q">CNYT 토큰은 어디서 거래할 수 있나요?</div>
-    <div class="faq-a">현재는 플랫폼 내부 P2P에서만 거래 가능합니다. <strong>2027년 Q1 거래소 상장을 목표</strong>로 하며, 법적 구조·유동성·거래소 요건 충족 시 Binance, OKX, Gate.io, Bybit 등 외부 거래소 거래가 가능해질 예정입니다.</div>
+    <div class="faq-a">
+      <p style="margin:0 0 10px">현재 CNYT는 플랫폼 내부 P2P 시스템을 통해서만 회원 간 거래가 가능합니다. 외부 거래소 상장을 아직 진행하지 않는 이유는 명확합니다 — 법적 구조, 유동성 확보, 마켓메이킹 파트너 선정, 거래소 리스팅 요건을 모두 충족한 상태에서 상장해야 토큰 가격이 안정적으로 형성되기 때문입니다.</p>
+      <p style="margin:0"><strong>2027년 Q1</strong>을 목표로 Binance, OKX, Gate.io, Bybit(Tier 1~2) 동시 상장 협의가 진행 중입니다. 상장 이후에는 플랫폼 외부에서도 CNYT를 자유롭게 매매할 수 있게 되며, 이는 현재 P2P 내부 거래 가격과는 다른 시장 가격이 형성되는 첫 번째 시점이 됩니다.</p>
+    </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">수익금은 언제 지급되나요?</div>
-    <div class="faq-a">매일 <strong>UTC 06:00</strong> 자동 지급. 보너스 USDT는 출금 잔액으로 전환 후 신청을 통해 출금 — 수수료 <strong>1.5%</strong> · 최소 출금 <strong>$10</strong> · 배치 처리 UTC 00:00~02:00 (일 1회, 최대 26시간 소요)</div>
+    <div class="faq-a">
+      <p style="margin:0 0 10px">AI가 만들어낸 수익은 매일 <strong>UTC 06:00</strong>에 자동 정산되어 회원 계정에 반영됩니다. UTC 06:00 기준은 아시아·중동·유럽 주요 시장의 오버랩 시간대를 고려한 설계입니다.</p>
+      <p style="margin:0">출금 신청은 언제든 가능하며, 시스템은 하루 1회 <strong>UTC 00:00~02:00</strong> 배치 처리 방식으로 실행됩니다. 신청부터 최종 도착까지 최대 <strong>26시간</strong>이 소요될 수 있으며, 출금 수수료는 <strong>1.5%</strong>, 최소 출금액은 <strong>$10</strong>입니다. 보너스 USDT는 출금 잔액으로 전환 후 동일한 절차로 출금됩니다.</p>
+    </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">중도해지할 경우 어떻게 되나요?</div>
     <div class="faq-a">
-      약정 기간 중 원금 해지가 원칙적으로 불가능합니다. <strong>Flexible 플랜만 예외</strong> — 즉시 해지 및 원금 100% 환급 가능.<br><br>
+      <p style="margin:0 0 10px">LONGRISE AI의 수익 모델은 AI 엔진이 회원의 자금을 실제로 운용해 거래 수익을 창출하는 구조입니다. 약정 기간 중 원금을 갑자기 회수하면 운용 전략의 연속성이 깨지기 때문에, <strong>원칙적으로 약정 기간 중 원금 해지는 불가능</strong>합니다. 단, <strong>Flexible 플랜은 예외</strong>로 약정 기간 없이 언제든 즉시 해지 및 원금 100% 환급이 가능합니다.<br><br>
       Basic~VIP (12개월 약정) 중도 해지 시 수수료:
       <div class="table-wrap" style="margin-top:10px"><table>
         <tr><th>해지 시점</th><th>수수료</th></tr>
@@ -1248,13 +1259,14 @@
         <tr><td>7~9개월</td><td>원금의 20%</td></tr>
         <tr><td>12개월</td><td>원금의 10%</td></tr>
       </table></div>
-      CNYT 언스테이킹: 30일 언본딩 기간 경과 후 가능.
+      CNYT 언스테이킹: 30일 언본딩(Unbonding) 기간 경과 후 가능합니다.
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">Red Dragon이 되려면 어떻게 해야 하나요?</div>
     <div class="faq-a">
+      <p style="margin:0 0 10px">Red Dragon은 현재 LONGRISE AI에서 아무도 달성하지 못한 최상위 직급입니다. 달성자가 없다는 사실은 반대로 말하면, <strong>지금이 가장 빠르게 선점할 수 있는 시기</strong>라는 의미이기도 합니다. 첫 번째 Red Dragon은 전체 Red Dragon 티어 일일 총수익의 1% 공유라는 독점적 특권을 누리며, 플랫폼 규모가 커질수록 그 절대 금액도 함께 증가합니다.</p>
       아래 <strong>5가지 조건을 모두 충족</strong>해야 합니다:
       <ul style="margin-top:8px">
         <li>VIP ($5,000) 패키지 보유</li>
@@ -1263,7 +1275,6 @@
         <li>팀 누적 매출 $100,000 이상</li>
         <li>15대 롤업 라인 확보</li>
       </ul>
-      현재(2026-03-15 기준) Red Dragon 첫 달성자는 아직 없습니다. 상위 리더 자리가 열려 있습니다.
     </div>
   </div>
 
