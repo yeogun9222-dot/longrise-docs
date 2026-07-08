@@ -427,7 +427,9 @@
       </button>
       <div class="nav-group-items">
         <button class="nav-item" onclick="navTo('p-cnyt')">CNYT Token · CNYT 토큰</button>
+        <button class="nav-item" onclick="navTo('p-plans')">Participation Plans · 참여 플랜</button>
         <button class="nav-item" onclick="navTo('p-earn')">Revenue System · 수익 구조</button>
+        <button class="nav-item" onclick="navTo('p-cnd')">CND · 카지노 결제자산</button>
         <button class="nav-item" onclick="navTo('p-dragon')">Red Dragon · 레드 드래곤</button>
         <button class="nav-item" onclick="navTo('p-p2p')">P2P Trading · P2P 거래</button>
       </div>
@@ -765,12 +767,24 @@
   <h2>보안 체계</h2>
   <div class="table-wrap"><table>
     <tr><th>계층</th><th>기술</th><th>역할</th></tr>
+    <tr><td><strong>월렛 분리</strong></td><td>콜드/핫 월렛 분리 보관</td><td>운용 자산 90%+ 콜드 월렛 보관, API 연동 운영 자금만 별도 핫 월렛 — 해킹·도난 리스크 최소화</td></tr>
     <tr><td><strong>인증</strong></td><td>2FA · 이메일 인증</td><td>회원 신원 보호</td></tr>
     <tr><td><strong>거래 보안</strong></td><td>거래 비밀번호</td><td>출금 · 거래 이중 보호</td></tr>
     <tr><td><strong>암호화</strong></td><td>AES-256 + TLS 1.3</td><td>데이터 전송 보호</td></tr>
+    <tr><td><strong>API 키 관리</strong></td><td>거래소별 분산 암호화 저장</td><td>키 유출 시에도 해당 거래소 1곳으로 피해 범위 한정 — 전체 자산 노출 차단</td></tr>
     <tr><td><strong>토큰</strong></td><td>ERC-20 + 다중 서명</td><td>거래 검증</td></tr>
     <tr><td><strong>감시</strong></td><td>24/7 AI 모니터링</td><td>비정상 거래 탐지</td></tr>
     <tr><td><strong>감사</strong></td><td>분기별 외부 감사 (Certik 예정)</td><td>정기적 검증</td></tr>
+  </table></div>
+
+  <h2>AI 알고리즘 리스크 관리 체계</h2>
+  <p>보안이 자산의 보관을 지킨다면, 이 체계는 AI 운용 자체의 리스크를 통제합니다. HFT Quant Engine이 거래를 실행하는 매 순간마다 아래 4가지 원칙이 자동으로 함께 작동합니다.</p>
+  <div class="table-wrap"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><strong>자동 손절 시스템</strong></td><td>포지션별 최대 손실 한도 사전 설정 · 임계치 도달 시 자동 청산으로 손실 확산 차단</td></tr>
+    <tr><td><strong>자산 분산 원칙</strong></td><td>단일 거래소·단일 포지션 집중 회피 · 멀티 거래소·멀티 전략 분산으로 시스템 리스크 완화</td></tr>
+    <tr><td><strong>실시간 변동성 모니터링</strong></td><td>변동성 급등 감지 시 전략 자동 전환 · 이상 시장 상황 시 포지션 자동 축소 또는 대기 모드 진입</td></tr>
+    <tr><td><strong>투명 거래 로깅</strong></td><td>모든 운용 거래 타임스탬프 기록 · 내부 감사 및 규제 제출용 완전한 추적성 확보</td></tr>
   </table></div>
 
   <h2>데이터 플로우</h2>
@@ -846,10 +860,102 @@
   </table></div>
   <blockquote>Flexible 웰컴 보너스 물량은 2026년 12월 TGE 락업 해제 후 매도 가능.</blockquote>
 
+  <h2>CNYT 스테이킹 보상 구조</h2>
+  <p>보유한 CNYT를 락업 기간에 따라 스테이킹하면, CND 출시 이후 수수료 수익 배분 시 더 높은 가중치를 받습니다. 락업 기간이 길수록 배분 가중치가 커지는 구조입니다.</p>
+  <div class="table-wrap"><table>
+    <tr><th>락업 기간</th><th>가중치</th><th>구분</th></tr>
+    <tr><td>6개월</td><td>1.0x</td><td>단기 락업</td></tr>
+    <tr><td>12개월</td><td>1.5x</td><td>중기 락업</td></tr>
+    <tr><td>24개월</td><td>2.5x</td><td>장기 락업</td></tr>
+  </table></div>
+  <blockquote>가중치는 CND 출시 이후 분기별 수수료 수익 배분 시 적용되는 CND Fee-Distribution Weight입니다. 자세한 내용은 CND 페이지 참고.</blockquote>
+
+  <h2>CNYT 가격 시나리오 (보유량 1,000개 기준)</h2>
+  <p>아래는 CNYT 가격 변동에 따른 참고용 가치 시나리오입니다. 실제 가격은 시장 상황에 따라 달라질 수 있으며 보장된 수익률이 아닙니다.</p>
+  <div class="table-wrap"><table>
+    <tr><th>CNYT 가격</th><th>1,000개 가치</th><th>수익률</th></tr>
+    <tr><td>$0.01</td><td>$10</td><td>기준</td></tr>
+    <tr><td>$0.02 (현재가)</td><td>$20</td><td>+100%</td></tr>
+    <tr><td>$0.05</td><td>$50</td><td>+400%</td></tr>
+    <tr><td>$0.10</td><td>$100</td><td>+900%</td></tr>
+    <tr><td>$1.00 (장기 목표)</td><td>$1,000</td><td>+9,900%</td></tr>
+  </table></div>
+
   <div class="page-nav">
     <button class="page-nav-btn" onclick="navTo('p-arch')">
       <span class="page-nav-label">← 이전</span>
       <span class="page-nav-title">Architecture · 기술 아키텍처</span>
+    </button>
+    <button class="page-nav-btn next" onclick="navTo('p-plans')">
+      <span class="page-nav-label">다음 →</span>
+      <span class="page-nav-title">Participation Plans · 참여 플랜</span>
+    </button>
+  </div>
+</div>
+
+<!-- 5-B. Participation Plans -->
+<div class="page" id="p-plans">
+  <div class="breadcrumb"><span>Ecosystem</span><span class="breadcrumb-sep">›</span><span>Participation Plans</span></div>
+  <h1>Participation Plans · 참여 플랜</h1>
+  <p class="page-subtitle">$100 Flexible부터 $5,000 VIP까지 — 5가지 플랜별 예치금·락업·수익률·CNYT 보너스 전체 비교.</p>
+  <hr class="page-divider">
+
+  <h2>플랜 요약</h2>
+  <div class="engine-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div class="engine-card">
+      <div class="engine-num">Flexible</div>
+      <div class="engine-name">$100</div>
+      <p style="font-size:13px;color:var(--text-muted)">락업 없음 · 월 4%~ · 즉시 해지 가능 · CNYT 5,000개</p>
+    </div>
+    <div class="engine-card">
+      <div class="engine-num">Basic</div>
+      <div class="engine-name">$200</div>
+      <p style="font-size:13px;color:var(--text-muted)">12개월 락업 · 월 7%~ · CNYT 10,000개</p>
+    </div>
+    <div class="engine-card">
+      <div class="engine-num">Standard</div>
+      <div class="engine-name">$500</div>
+      <p style="font-size:13px;color:var(--text-muted)">12개월 락업 · 월 9%~ · CNYT 25,000개</p>
+    </div>
+    <div class="engine-card">
+      <div class="engine-num">Premium</div>
+      <div class="engine-name">$1,000</div>
+      <p style="font-size:13px;color:var(--text-muted)">12개월 락업 · 월 11%~ · CNYT 50,000개</p>
+    </div>
+    <div class="engine-card">
+      <div class="engine-num">VIP ★</div>
+      <div class="engine-name">$5,000</div>
+      <p style="font-size:13px;color:var(--text-muted)">12개월 락업 · 월 18%~ · CNYT 250,000개 · 최상위 AI 전략 티어</p>
+    </div>
+  </div>
+
+  <h2>12개월 수익 시뮬레이션 (단리 기준)</h2>
+  <p>아래 수치는 AI 성과에 따라 변동되는 최소 기준치이며, 복리가 아닌 단순 계산입니다. 총 지급액 = 원금 + (원금 × 월수익률 × 12개월).</p>
+  <div class="table-wrap"><table>
+    <tr><th>플랜</th><th>예치금</th><th>락업</th><th>월 수익률</th><th>월 수익(단순)</th><th>12개월 누적 수익</th><th>12개월 총 지급액</th><th>CNYT 보너스</th></tr>
+    <tr><td>Flexible</td><td>$100</td><td>없음</td><td>4%~</td><td>$4~</td><td>$48~</td><td>$148~</td><td>5,000개</td></tr>
+    <tr><td>Basic</td><td>$200</td><td>12개월</td><td>7%~</td><td>$14~</td><td>$168~</td><td>$368~</td><td>10,000개</td></tr>
+    <tr><td>Standard</td><td>$500</td><td>12개월</td><td>9%~</td><td>$45~</td><td>$540~</td><td>$1,040~</td><td>25,000개</td></tr>
+    <tr><td>Premium</td><td>$1,000</td><td>12개월</td><td>11%~</td><td>$110~</td><td>$1,320~</td><td>$2,320~</td><td>50,000개</td></tr>
+    <tr><td>VIP ★</td><td>$5,000</td><td>12개월</td><td>18%~</td><td>$900~</td><td>$10,800~</td><td>$15,800~</td><td>250,000개</td></tr>
+  </table></div>
+  <div class="callout">
+    <strong>일일 USDT 정산</strong><br>
+    USDT 수익은 매일 UTC 06:00 자동 정산됩니다. Flexible은 락업 없이 자유 입출금 가능하며, Basic~VIP는 12개월 약정 종료 후 원금과 수익을 함께 정산합니다.
+  </div>
+
+  <h2>조기 해지 정책</h2>
+  <div class="table-wrap"><table>
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td><strong>Flexible — 즉시 해지</strong></td><td>신청 후 24시간 이내 원금 100% 환급</td></tr>
+    <tr><td><strong>락업 플랜 — 3개월 이내 조기 해지</strong></td><td>수수료 30% 차감, 70% 환급 (원금의 최소 70% 보장)</td></tr>
+    <tr><td><strong>12개월 정상 만기</strong></td><td>원금 + 전체 누적 수익 + 락업 CNYT 전량 해제</td></tr>
+  </table></div>
+
+  <div class="page-nav">
+    <button class="page-nav-btn" onclick="navTo('p-cnyt')">
+      <span class="page-nav-label">← 이전</span>
+      <span class="page-nav-title">CNYT Token · CNYT 토큰</span>
     </button>
     <button class="page-nav-btn next" onclick="navTo('p-earn')">
       <span class="page-nav-label">다음 →</span>
@@ -958,9 +1064,65 @@
   <blockquote>Flexible 웰컴 보너스 물량은 2026년 12월 TGE 락업 해제 후 매도 가능.</blockquote>
 
   <div class="page-nav">
-    <button class="page-nav-btn" onclick="navTo('p-cnyt')">
+    <button class="page-nav-btn" onclick="navTo('p-plans')">
       <span class="page-nav-label">← 이전</span>
-      <span class="page-nav-title">CNYT Token · CNYT 토큰</span>
+      <span class="page-nav-title">Participation Plans · 참여 플랜</span>
+    </button>
+    <button class="page-nav-btn next" onclick="navTo('p-cnd')">
+      <span class="page-nav-label">다음 →</span>
+      <span class="page-nav-title">CND · 카지노 결제자산</span>
+    </button>
+  </div>
+</div>
+
+<!-- 6-B. CND -->
+<div class="page" id="p-cnd">
+  <div class="breadcrumb"><span>Ecosystem</span><span class="breadcrumb-sep">›</span><span>CND</span></div>
+  <h1>CND · 차세대 카지노 결제자산</h1>
+  <p class="page-subtitle">CNYT 생태계 성장의 다음 단계 — 실물 카지노 현장에서 사용되는 프라이버시 기반 결제·정산 자산.</p>
+  <hr class="page-divider">
+
+  <div class="callout"><strong>개발 진행 중</strong> — CND는 현재 기술 개발 단계이며, 아래 내용은 준비 조건 충족 시 적용되는 설계 원칙입니다. 목표 출시 시기는 Roadmap 페이지를 참고하세요.</div>
+
+  <h2>CND 설계 원칙</h2>
+  <div class="table-wrap"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><strong>기준 가치</strong></td><td>1 CND ≈ USD 1 참조 가치 · 파트너 매장에서 현지 통화·카지노 칩·승인된 서비스로 실시간 전환</td></tr>
+    <tr><td><strong>직접 법정화폐 청구권 없음</strong></td><td>재단 또는 규제 금융기관에 대한 직접 환급 청구권 없음 · 파트너 카지노·정킷을 통해서만 전환</td></tr>
+    <tr><td><strong>수익 모델</strong></td><td>카지노 환전·결제·정산 수수료 — 일부 채널에서 두 자릿수 수수료율 가능</td></tr>
+    <tr><td><strong>거버넌스</strong></td><td>활성 스테이킹 CNYT 보유량에 따른 분기별 투표 — CND 수수료 분배율 결정</td></tr>
+  </table></div>
+
+  <h2>CNYT → CND 전환 구조</h2>
+  <div class="table-wrap"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><strong>단방향 전환</strong></td><td>CNYT → CND 전환만 가능, CND → CNYT 역전환 불가</td></tr>
+    <tr><td><strong>영구 소각</strong></td><td>전환된 CNYT는 영구 소각 처리 — 총 발행량 및 유통량 순감소</td></tr>
+    <tr><td><strong>전환 가격 산정</strong></td><td>CNYT 24시간 시간가중평균가격(TWAP) + 별도 고정 전환 수수료</td></tr>
+    <tr><td><strong>접근 우선순위</strong></td><td>승인된 전략적 참여자 우선 처리 → 단계적 확대. LONGRISE는 우선 접근권을 갖되 가격 우대는 없음</td></tr>
+  </table></div>
+
+  <h2>CND를 보호하는 준비금 시스템</h2>
+  <div class="table-wrap"><table>
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td><strong>실물 카지노 자산 기반</strong></td><td>운영권·수익분배권·정킷 수익·거래소 준비금·리조트 지분 등 게이밍 연계 자산. 독립 외부 평가 + 실제 운영 성과 + 현금흐름할인법(DCF)을 종합해 가치 산정</td></tr>
+    <tr><td><strong>유동성 지원 자산</strong></td><td>현금성 자산 및 유동 디지털 자산으로 결제·준비금 운영 지원 · 외부평가 연 1회, 내부 모니터링 분기별</td></tr>
+    <tr><td><strong>최소 준비금 비율 110%</strong></td><td>위험조정 준비금 가치는 발행된 CND 참조가치의 110% 이상 유지 의무 · 미달 시 신규 CND 발행 및 CNYT→CND 전환 즉시 중단, 재단은 회복 계획 실행</td></tr>
+  </table></div>
+
+  <h2>거래 프라이버시 설계</h2>
+  <p>CND는 프라이버시 보호형 카지노 환전·정산 자산으로 설계됩니다. 기본적으로 송신자·수신자·금액·지갑 연결·정산 내역은 공개 원장에 노출되지 않습니다.</p>
+  <div class="table-wrap"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><strong>승인된 당사자용 프라이빗 원장</strong></td><td>상호 합의 시 승인된 키 보유자는 전체 거래 기록을 프라이빗 원장으로 열람 가능 · 규제·외부감사·사법 요구에 대응하는 컴플라이언스 레이어 제공</td></tr>
+    <tr><td><strong>제3자용 암호학적 유효성 증명</strong></td><td>영지식증명(Zero-Knowledge Proof, ZKP) 기술로 거래 상대방·금액·상세 내역 노출 없이 거래의 유효성만 확인 가능</td></tr>
+  </table></div>
+  <blockquote>블록체인 레이어 및 암호학적 구현 세부사항은 별도 기술 백서에서 상세히 다룹니다.</blockquote>
+
+  <div class="page-nav">
+    <button class="page-nav-btn" onclick="navTo('p-earn')">
+      <span class="page-nav-label">← 이전</span>
+      <span class="page-nav-title">Revenue System · 수익 구조</span>
     </button>
     <button class="page-nav-btn next" onclick="navTo('p-dragon')">
       <span class="page-nav-label">다음 →</span>
@@ -1016,9 +1178,9 @@
   </table></div>
 
   <div class="page-nav">
-    <button class="page-nav-btn" onclick="navTo('p-earn')">
+    <button class="page-nav-btn" onclick="navTo('p-cnd')">
       <span class="page-nav-label">← 이전</span>
-      <span class="page-nav-title">Revenue System · 수익 구조</span>
+      <span class="page-nav-title">CND · 카지노 결제자산</span>
     </button>
     <button class="page-nav-btn next" onclick="navTo('p-p2p')">
       <span class="page-nav-label">다음 →</span>
@@ -1306,12 +1468,14 @@ const PAGE_MAP = {
   'p-engine':   { nav: 3,  group: 'grp-tech',   breadcrumb: 'Twin Engine' },
   'p-arch':     { nav: 4,  group: 'grp-tech',   breadcrumb: 'Architecture' },
   'p-cnyt':     { nav: 5,  group: 'grp-eco',    breadcrumb: 'CNYT Token' },
-  'p-earn':     { nav: 6,  group: 'grp-eco',    breadcrumb: 'Revenue System' },
-  'p-dragon':   { nav: 7,  group: 'grp-eco',    breadcrumb: 'Red Dragon' },
-  'p-p2p':      { nav: 8,  group: 'grp-eco',    breadcrumb: 'P2P Trading' },
-  'p-global':   { nav: 9,  group: 'grp-vision', breadcrumb: 'Global Expansion' },
-  'p-road':     { nav: 10, group: 'grp-vision', breadcrumb: 'Roadmap' },
-  'p-faq':      { nav: 11, group: 'grp-vision', breadcrumb: 'FAQ' },
+  'p-plans':    { nav: 6,  group: 'grp-eco',    breadcrumb: 'Participation Plans' },
+  'p-earn':     { nav: 7,  group: 'grp-eco',    breadcrumb: 'Revenue System' },
+  'p-cnd':      { nav: 8,  group: 'grp-eco',    breadcrumb: 'CND' },
+  'p-dragon':   { nav: 9,  group: 'grp-eco',    breadcrumb: 'Red Dragon' },
+  'p-p2p':      { nav: 10, group: 'grp-eco',    breadcrumb: 'P2P Trading' },
+  'p-global':   { nav: 11, group: 'grp-vision', breadcrumb: 'Global Expansion' },
+  'p-road':     { nav: 12, group: 'grp-vision', breadcrumb: 'Roadmap' },
+  'p-faq':      { nav: 13, group: 'grp-vision', breadcrumb: 'FAQ' },
 };
 
 function navTo(pageId) {
@@ -1332,8 +1496,8 @@ function show(id, btn, label) {
   const map = {
     'p-overview':0,'p-founding':1,'p-growth':2,
     'p-engine':3,'p-arch':4,
-    'p-cnyt':5,'p-earn':6,'p-dragon':7,'p-p2p':8,
-    'p-global':9,'p-road':10,'p-faq':11
+    'p-cnyt':5,'p-plans':6,'p-earn':7,'p-cnd':8,'p-dragon':9,'p-p2p':10,
+    'p-global':11,'p-road':12,'p-faq':13
   };
   const idx = map[id];
   if (navItems[idx]) navItems[idx].classList.add('active');
